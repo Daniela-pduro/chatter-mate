@@ -1,0 +1,27 @@
+[project]
+name = "chatter-mate"
+version = "0.1.0"
+description = "LLM-powered conversational language learning agent built with LangGraph and FastAPI."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "langgraph",
+    "pydantic-settings",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "mypy",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
