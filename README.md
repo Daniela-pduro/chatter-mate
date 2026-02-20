@@ -16,6 +16,7 @@ This ensures flexibility, scalability, and clean client-server communication.
 
 ChatterMate follows a decoupled client–server architecture:
 
+```
 Client (CLI / Web / Bot / Voice)
         ↓
 HTTP API (FastAPI)
@@ -23,5 +24,4 @@ HTTP API (FastAPI)
 Agent Layer (LangGraph)
         ↓
 Persistence (future: memory & progress tracking)
-
-
+```
