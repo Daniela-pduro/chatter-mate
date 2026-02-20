@@ -13,3 +13,15 @@ The project is designed with a **modular architecture**, separating:
 This ensures flexibility, scalability, and clean client-server communication.
 
 ## Architecture Overview
+
+ChatterMate follows a decoupled client–server architecture:
+
+Client (CLI / Web / Bot / Voice)
+        ↓
+HTTP API (FastAPI)
+        ↓
+Agent Layer (LangGraph)
+        ↓
+Persistence (future: memory & progress tracking)
+
+
