@@ -25,3 +25,11 @@ Agent Layer (LangGraph)
         ↓
 Persistence (future: memory & progress tracking)
 ```
+**POST /chat**
+Primary conversation endpoint. 
+
+This endpoint accepts a structured request and returns a structured response.
+It currently returns a mock (stub) response and will later be connected to the LangGraph agent.
+
+Note about the correction schema: although corrections are currently returned as an empty list (stub implementation),
+this structure will be used by the agent to provide intelligent feedback and **track learning** progress.
