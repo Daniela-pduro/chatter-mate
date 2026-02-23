@@ -26,13 +26,15 @@ Agent Layer (LangGraph)
 Persistence (future: memory & progress tracking)
 ```
 **POST /chat**
-Primary conversation endpoint. 
+Primary conversation endpoint. Accepts a structured request and returns a structured response, 
+including the assistant's reply and any language corrections detected in the user's message.
 
-This endpoint accepts a structured request and returns a structured response.
-It currently returns a mock (stub) response and will later be connected to the LangGraph agent.
+## Nodes
+- **detect_language**: detects whether the user's message contains the target language.
+- **detect_errors**: analyzes errors and generates the conversational response. 
 
-Note about the correction schema: although corrections are currently returned as an empty list (stub implementation),
-this structure will be used by the agent to provide intelligent feedback and **track learning** progress.
+The node design aims to minimize LLM calls per turn by combining related tasks within a single call. 
+This reduces the maximum number of LLM calls to 2 per turn (1 if no target language is detected).
 
 ## Current Status
 - ✅ FastAPI backend running
@@ -40,6 +42,8 @@ this structure will be used by the agent to provide intelligent feedback and **t
 - ✅ Health endpoint
 - ✅ Structured /chat endpoint
 - ✅ Stub conversational response
+- ✅ CLI client
+- ✅ LangGraph graph with mock nodes (end-to-end flow working)
 - 🚧 LangGraph integration (coming next)
 - 🚧 Persistent memory & progress tracking
 
