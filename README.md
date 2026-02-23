@@ -41,10 +41,9 @@ This reduces the maximum number of LLM calls to 2 per turn (1 if no target langu
 - ✅ Modular src/ layout
 - ✅ Health endpoint
 - ✅ Structured /chat endpoint
-- ✅ Stub conversational response
 - ✅ CLI client
 - ✅ LangGraph graph with mock nodes (end-to-end flow working)
-- 🚧 LangGraph integration (coming next)
+- 🚧 LLM integration for language detection and error analysis
 - 🚧 Persistent memory & progress tracking
 
 Also, extensible architecture allows for future features like multiple client interfaces and voice input.
