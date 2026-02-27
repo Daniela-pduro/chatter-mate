@@ -55,4 +55,9 @@ docker run -p 8000:8000 chatter-mate
 
 Also, extensible architecture allows for future features like multiple client interfaces and voice input.
 
+## Planned Stack
+- **LLM** → OpenAI
+- **STT** (Speech-to-Text) → Whisper (OpenAI)
+- **TTS** (Text-to-Speech) → ElevenLabs
+
 TODO: -check whether streaming response support is needed (i.e. tokens instead of full response) for better user experience.
