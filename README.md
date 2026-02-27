@@ -36,6 +36,13 @@ including the assistant's reply and any language corrections detected in the use
 The node design aims to minimize LLM calls per turn by combining related tasks within a single call. 
 This reduces the maximum number of LLM calls to 2 per turn (1 if no target language is detected).
 
+## Running with Docker
+
+```bash
+docker build -t chatter-mate .
+docker run -p 8000:8000 chatter-mate
+```
+
 ## Current Status
 - ✅ FastAPI backend running
 - ✅ Modular src/ layout
