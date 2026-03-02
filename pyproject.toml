@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi",
     "langgraph",
+    "openai",
     "pydantic-settings",
     "uvicorn",
 ]
@@ -17,6 +18,11 @@ dev = [
     "pytest-asyncio",
     "mypy",
     "ruff",
+]
+voice = [
+    "sounddevice",
+    "soundfile",
+    "numpy",
 ]
 
 [build-system]
